@@ -1,10 +1,16 @@
 object torch
-    variable is_on = true
     name Mini torch
+    set is_on to true
     description
-        if is_on = true
+        if is_on is true
             A small battery powered torch.  It is currently on.
         else
             A small battery powered torch.  It is currently off.
-    action turn on is_on = false
-    action turn off is_on = true
+    action
+        verb turn
+            if is_on is true
+                set is_on to false
+                describe You turn the torch on
+            else
+                set is_on to true
+                describe You turn the torch off

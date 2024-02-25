@@ -1,11 +1,15 @@
 location beach-end
-    name The Beach End
+    name "The Beach End"
     description
+        "
         You continue along the beach.
+        "
     detailed
+        "
         To the north there are trees and tropical vegatation.  It is too overgrown to transverse.
         The sea to the south prevents you from heading in that direction.  To the east the beach
         thins and meets the sea.  You can only return back where you came from, to the west.
+        "
     object banana
     object coconut
-    exit east the-beach
+    exit east to the-beach

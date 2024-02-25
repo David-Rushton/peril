@@ -1,12 +1,14 @@
 location the-beach
-    name The Beach
-    description
+    name "The Beach"
+    description "
         To the north you see a path through the forest.  To the west the beach continues.
-    detailed
+        "
+    detailed "
         The beach is truly beautiful.  The aqua water gently laps against the soft golden sands.
 
         To the south there is only sea.  Without a boat you cannot move in that direction.  To the
         east an outcrop of rocks raises from the sea, blocking your path.  To the north; the treeline
         meets the beach.  There is a path between the trees.  To your west the beach continues.
-    exit north forest-path
-    exit west beach-end
+        "
+    exit north to forest-path
+    exit west to beach-end
