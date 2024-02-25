@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dr.Peril.Interpreter", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dr.Peril.Script", "src\Dr.Peril.Script\Dr.Peril.Script.csproj", "{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dr.Peril", "src\Dr.Peril\Dr.Peril.csproj", "{F3AB406F-BDCB-46AC-ACB0-120A562D74B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AB406F-BDCB-46AC-ACB0-120A562D74B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AB406F-BDCB-46AC-ACB0-120A562D74B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AB406F-BDCB-46AC-ACB0-120A562D74B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AB406F-BDCB-46AC-ACB0-120A562D74B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57} = {3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}
 		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C} = {3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}
+		{F3AB406F-BDCB-46AC-ACB0-120A562D74B7} = {3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}
 	EndGlobalSection
 EndGlobal
