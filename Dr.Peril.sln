@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dr.Peril.Interpreter", "src\Dr.Peril.Interpreter\Dr.Peril.Interpreter.csproj", "{DA001CCF-8AE5-49CA-B2E6-006895A6CD57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dr.Peril.Script", "src\Dr.Peril.Script\Dr.Peril.Script.csproj", "{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA001CCF-8AE5-49CA-B2E6-006895A6CD57} = {3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}
+		{FB043036-CB9D-4CE7-9DC1-4E4709566E0C} = {3D9F25AB-5F8B-4085-9EE3-357EA6E7A359}
+	EndGlobalSection
+EndGlobal
