@@ -1,0 +1,8 @@
+location forest-path
+    name Forest Path
+    description
+        The path meanders between the trees.  Eventually a fallen tree blocks your path.  You can
+        head no further.
+    detailed
+        The tropical vegatation is thick, and blocks your path in all directions.
+    exit south the-beach

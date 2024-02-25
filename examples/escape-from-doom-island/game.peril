@@ -1,0 +1,13 @@
+game
+    name Escape From Doom Island
+    start the-beach
+    introduction
+        The storm has been raging for three hours now.
+
+        Wave after wave has crashed against your boat.  You're not sure how many more you can
+        survive.  You are in the middle of the Pacific, with nowhere to hide.  In the distance you
+        see another wave.  A large wave.  Bigger than a house.  Much bigger.  The wave smashes
+        against your boat, dragging you under the water...
+
+        You wake the next day.  You are on a beach.  There is no sign of your boat.  You are hungry
+        and thirsty.  Perhaps you should find something to eat and drink?
