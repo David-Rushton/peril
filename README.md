@@ -1,4 +1,4 @@
-# Peril 
+# Peril
 
 🚧🚧🚧 Under Construction 🚧🚧🚧
 
@@ -9,5 +9,3 @@ Peril is a system for making your own text adventure games.  We provide the syst
 
 peril-script -> A language for writing your own text adventure games
 peril-intrepreter -> Converts text to instructions
-
-
