@@ -5,7 +5,7 @@ namespace Dr.Peril.Script.Internals;
 
 internal class Tokeniser(Preprocessor preprocessor)
 {
-    private const string EscapeScriptExtension = "*.es.txt";
+    private const string EscapeScriptExtension = "*.peril";
 
     internal IEnumerable<Token> ToTokens(string sourceRoot)
     {
@@ -27,7 +27,7 @@ internal class Tokeniser(Preprocessor preprocessor)
                 lineNumber++;
 
                 // we shouldn't yield outdents for empty lines
-                // they are not meaningful
+                // they are not semantically meaningful
                 // they exist to make the source files easier to read
                 var readingIndent = line.Trim().Length > 0;
 
@@ -51,7 +51,7 @@ internal class Tokeniser(Preprocessor preprocessor)
                         indent++;
                     }
 
-                    if (IsDelimiter(character))
+                    if (IsNewLineOrSpace(character))
                     {
                         var value = buffer.ToString().Trim();
                         buffer.Clear();
@@ -59,14 +59,13 @@ internal class Tokeniser(Preprocessor preprocessor)
                         if (!string.IsNullOrWhiteSpace(value))
                             yield return Token.New(file, lineNumber, value);
 
-                        if (character is not LanguageConstants.Space)
-                            yield return character is '\n'
-                                ? Token.New(file, lineNumber, TokenType.NewLine, character.ToString())
-                                : Token.New(file, lineNumber, TokenType.Operator, character.ToString());
+                        if (character is '\n')
+                            yield return Token.New(
+                                file, lineNumber, TokenType.NewLine, character.ToString());
                     }
                     else
                     {
-                        // not delimiter
+                        // not new line or space
                         buffer.Append(character);
                     }
                 }
@@ -76,8 +75,7 @@ internal class Tokeniser(Preprocessor preprocessor)
         }
     }
 
-    private static bool IsDelimiter(char character) =>
-        LanguageConstants.Operators.Contains(character)
-        || character is LanguageConstants.Space
+    private static bool IsNewLineOrSpace(char character) =>
+        character is LanguageConstants.Space
         || character is '\n';
 }

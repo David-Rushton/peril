@@ -4,22 +4,22 @@ internal static class LanguageConstants
 {
     internal const char Space = ' ';
 
-    internal const string RoomKeyword = "room";
+    internal const string LocationKeyword = "location";
     internal const string NameKeyword = "name";
     internal const string DescriptionKeyword = "description";
     internal const string DetailedKeyword = "detailed";
-    internal const string ConnectionsKeyword = "connections";
+    internal const string ExitKeyword = "exit";
     internal const string GameKeyword = "game";
     internal const string ObjectKeyword = "object";
-    internal const string ObjectsKeyword = "objects";
+    internal const string ObjectsKeyword = "objects-deprecated";
     internal const string StartKeyword = "start";
     internal const string IntroductionKeyword = "introduction";
     internal static readonly string[] Keywords = [
-        RoomKeyword,
+        LocationKeyword,
         NameKeyword,
         DescriptionKeyword,
         DetailedKeyword,
-        ConnectionsKeyword,
+        ExitKeyword,
         GameKeyword,
         ObjectKeyword,
         ObjectsKeyword,

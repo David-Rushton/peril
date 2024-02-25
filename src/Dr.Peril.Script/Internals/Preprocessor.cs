@@ -15,9 +15,6 @@ internal class Preprocessor
             .Replace("\t", new string(' ', TabWidth))
             .Trim();
 
-        // appending two final new lines ensures every file ends with a blank line.
-        // this resets the indent level, and ensures a final token is flushed through the system.
-        // that token simplifies identifying the end of various sequences within the lexer.
         return source;
     }
 }

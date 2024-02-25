@@ -8,5 +8,5 @@ location the-beach
         To the south there is only sea.  Without a boat you cannot move in that direction.  To the
         east an outcrop of rocks raises from the sea, blocking your path.  To the north; the treeline
         meets the beach.  There is a path between the trees.  To your west the beach continues.
-    move north forest-path
-    move west beach-end
+    exit north forest-path
+    exit west beach-end
