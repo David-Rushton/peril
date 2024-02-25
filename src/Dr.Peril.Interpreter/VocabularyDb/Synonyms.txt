@@ -1,0 +1,7 @@
+move
+    crawl
+    go
+    head
+    run
+    travel
+    walk
