@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Dr.Peril.Script.Internals.Abstractions;
 using Dr.Peril.Script.Internals.Lexers;
 
@@ -7,7 +8,10 @@ internal class Lexer(Tokeniser tokeniser, IEnumerable<ILexer> lexers)
 {
     internal IEnumerable<Lexeme> ToLexemes(string sourceRoot)
     {
+        var indentLevel = 0;
+        var lastIsEndOfSection = false;
         ILexer? lexer = null;
+
 
         var tokens = new Queue<Token>(tokeniser.ToTokens(sourceRoot));
         while (tokens.TryDequeue(out var current))
@@ -23,10 +27,23 @@ internal class Lexer(Tokeniser tokeniser, IEnumerable<ILexer> lexers)
             if (lexer.IsTerminal)
             {
                 foreach (var lexeme in lexer.ToLexemes())
+                {
+                    lastIsEndOfSection = lexeme.Type == LexemeType.EndOfSection;
                     yield return lexeme;
+                }
 
                 lexer = null;
             }
+
+            if (current.Type is TokenType.Indent)
+                indentLevel++;
+            if (current.Type is TokenType.Outdent)
+                indentLevel--;
+
+            Debug.Assert(indentLevel > 0);
+
+            if (indentLevel == 0 && !lastIsEndOfSection)
+                yield return new LexemeEndOfSection(current.Source);
         }
     }
 

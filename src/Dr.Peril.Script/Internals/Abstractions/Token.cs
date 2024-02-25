@@ -32,7 +32,6 @@ internal readonly record struct Token(
     internal static Token New(string path, int lineNumber, TokenType type, string value) =>
         new(new(path, lineNumber), type, value);
 
-
     internal static Token New(Source source, TokenType type)
         => new(source, type, string.Empty);
 

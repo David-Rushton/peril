@@ -25,7 +25,7 @@ internal class WhitespaceLexer : ILexer
     {
         Debug.Assert(_token.HasValue);
 
-        // we swallow everyting exception end of file.
+        // we swallow everyting except end of file.
         if (_token.Value.Type is TokenType.EndOfFile)
             yield return new LexemeEndOfSection(_token.Value.Source);
 

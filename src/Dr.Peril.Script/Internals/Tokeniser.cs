@@ -51,7 +51,9 @@ internal class Tokeniser(Preprocessor preprocessor)
                         indent++;
                     }
 
-                    if (IsNewLineOrSpace(character))
+                    // Always return delimiters in a dedicated token.  These have special meaning.
+                    // Making them easier to location and parse downstream.
+                    if (IsDelimiter(character))
                     {
                         var value = buffer.ToString().Trim();
                         buffer.Clear();
@@ -59,13 +61,13 @@ internal class Tokeniser(Preprocessor preprocessor)
                         if (!string.IsNullOrWhiteSpace(value))
                             yield return Token.New(file, lineNumber, value);
 
-                        if (character is '\n')
+                        if (character is LanguageConstants.DoubleQuote or LanguageConstants.NewLine)
                             yield return Token.New(
                                 file, lineNumber, TokenType.NewLine, character.ToString());
                     }
                     else
                     {
-                        // not new line or space
+                        // not delimiter
                         buffer.Append(character);
                     }
                 }
@@ -75,7 +77,9 @@ internal class Tokeniser(Preprocessor preprocessor)
         }
     }
 
-    private static bool IsNewLineOrSpace(char character) =>
-        character is LanguageConstants.Space
-        || character is '\n';
+    private static bool IsDelimiter(char character) =>
+        character is
+            LanguageConstants.Space
+            or LanguageConstants.DoubleQuote
+            or LanguageConstants.NewLine;
 }

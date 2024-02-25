@@ -5,13 +5,10 @@ internal enum LexemeType
     Keyword,
     Identifier,
     Literal,
-    Key,
-    Value,
-    ListItem,
     EndOfSection
 }
 
-internal record Lexeme(
+internal abstract record Lexeme(
     Source Source,
     LexemeType Type);
 
@@ -27,18 +24,6 @@ internal record LexemeIdentifier(
 internal record LexemeLiteral(
     Source Source,
     string Value) : Lexeme(Source, LexemeType.Literal);
-
-internal record LexemeKey(
-    Source Source,
-    string Key) : Lexeme(Source, LexemeType.Key);
-
-internal record LexemeValue(
-    Source Source,
-    string Value) : Lexeme(Source, LexemeType.Value);
-
-internal record LexemeListItem(
-    Source Source,
-    string Value) : Lexeme(Source, LexemeType.ListItem);
 
 internal record LexemeEndOfSection(
     Source Source
